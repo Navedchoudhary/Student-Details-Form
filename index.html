@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Information Form</h2>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="entryDate">Date of Entry:</label>
+                <input type="date" id="entryDate" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <input type="text" id="class" required>
+            </div>
+
+            <div class="form-group">
+                <label for="leaves">Total Leaves:</label>
+                <input type="number" id="leaves" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="leaveReason">Reason for Leaves:</label>
+                <select id="leaveReason">
+                    <option value="">Select</option>
+                    <option value="Health">Health</option>
+                    <option value="Family">Family</option>
+                    <option value="Personal">Personal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Participation in Activities:</label>
+                <fieldset>
+                    <legend>Sports</legend>
+                    <div class="field-options">
+                        <label><input type="radio" name="sport" value="Cricket"> Cricket</label>
+                        <label><input type="radio" name="sport" value="Basketball"> Basketball</label>
+                        <label><input type="radio" name="sport" value="Football"> Football</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dance</legend>
+                    <div class="field-options">
+                        <label><input type="radio" name="dance" value="Hip-hop"> Hip-hop</label>
+                        <label><input type="radio" name="dance" value="Bollywood"> Bollywood</label>
+                        <label><input type="radio" name="dance" value="Kathak"> Kathak</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Art</legend>
+                    <div class="field-options">
+                        <label><input type="radio" name="art" value="Mandala"> Mandala Art</label>
+                        <label><input type="radio" name="art" value="Water painting"> Water Painting</label>
+                        <label><input type="radio" name="art" value="Clay"> Clay Art</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div id="eyeTestSection" class="form-group hidden">
+                <label>Has the student undergone an eye test?</label>
+                <select id="eyeTest">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div id="doctorVisitSection" class="form-group hidden">
+                <label>Has the student visited a doctor for the health issue?</label>
+                <select id="doctorVisit">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
